@@ -22,6 +22,5 @@ import java.lang.annotation.Target;
 				"spring.jpa.hibernate.ddl-auto=create-drop",
 		})
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-@Testcontainers
 public @interface DataTest {
 }

@@ -7,16 +7,19 @@ import org.testcontainers.junit.jupiter.Container;
 
 @DataTest
 public abstract class BaseJpaTest {
+	// @formatter:off
 
 	static final PostgreSQLContainer postgreSQLContainer;
+
 	static {
-		postgreSQLContainer = (PostgreSQLContainer) new PostgreSQLContainer()
+		postgreSQLContainer = (PostgreSQLContainer) new PostgreSQLContainer("postgres:latest")
 				.withDatabaseName("test")
 				.withUsername("duke")
 				.withPassword("s3cret")
 				.withReuse(true);
 		postgreSQLContainer.start();
 	}
+
 	@DynamicPropertySource
 	static void datasourceConfig(DynamicPropertyRegistry registry) {
 		registry.add("spring.datasource.url", postgreSQLContainer::getJdbcUrl);
@@ -24,4 +27,5 @@ public abstract class BaseJpaTest {
 		registry.add("spring.datasource.username", postgreSQLContainer::getUsername);
 	}
 
+	// @formatter:on
 }

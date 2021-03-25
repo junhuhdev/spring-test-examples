@@ -20,3 +20,13 @@
 spring.datasource.driver-class-name=com.p6spy.engine.spy.P6SpyDriver
 ```
 
+
+### test-containers
+
+/users/jon/.testcontainers.properties
+
+Add following line
+
+```
+testcontainers.reuse.enable=true
+```
