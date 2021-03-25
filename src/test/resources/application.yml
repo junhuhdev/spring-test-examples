@@ -5,6 +5,6 @@ spring:
     show-sql: true
     generate-ddl: true
   datasource:
-    url: "jdbc:postgresql://localhost:5432/skeleton"
+    url: "jdbc:p6spy:postgresql://localhost:5432/skeleton"
     username: user
     password: test
