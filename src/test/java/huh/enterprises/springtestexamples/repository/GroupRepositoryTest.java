@@ -1,23 +1,22 @@
 package huh.enterprises.springtestexamples.repository;
 
 import huh.enterprises.springtestexamples.annotation.DataTest;
-import huh.enterprises.springtestexamples.domain.Group;
+import huh.enterprises.springtestexamples.domain.RewardGroup;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @DataTest
 class GroupRepositoryTest {
 
 	@Autowired
-	private GroupRepository groupRepository;
+	private RewardGroupRepository groupRepository;
 
 
 	@Test
 	public void test() {
-		var group = Group.builder()
+		var group = RewardGroup.builder()
 				.ssn("19910102-1234")
 				.build();
 		groupRepository.save(group);

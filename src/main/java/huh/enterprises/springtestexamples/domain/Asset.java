@@ -1,25 +1,21 @@
 package huh.enterprises.springtestexamples.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.Valid;
-import java.util.ArrayList;
-import java.util.List;
 
 @Getter
 @Setter
@@ -28,21 +24,17 @@ import java.util.List;
 @NoArgsConstructor
 @Table
 @Entity
-public class Group {
-
+public class Asset {
 	// @formatter:off
+
 	@Id
 	@Column
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	@Column
-	private String ssn;
-
-	@OneToMany(orphanRemoval = true, fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "group")
-	@Fetch(FetchMode.SUBSELECT)
-	@Valid
-	@Builder.Default
-	private List<Member> members = new ArrayList<>();
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "REWARD_GROUP_ID")
+	@JsonIgnore
+	private RewardGroup rewardGroup;
 	// @formatter:on
 }
