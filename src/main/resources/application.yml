@@ -1,8 +1,10 @@
 spring:
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    generate-ddl: true
   datasource:
     url: "jdbc:postgresql://localhost:5432/skeleton"
     username: user
