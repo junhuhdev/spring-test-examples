@@ -1,6 +1,6 @@
 # spring-test-examples
 
-![image](https://user-images.githubusercontent.com/45692017/112557388-a837b500-8dcc-11eb-836b-7a1f2102b12d.png)
+![image](https://user-images.githubusercontent.com/45692017/112557995-0a44ea00-8dce-11eb-93df-ac5016da6859.png)
 
 
 
