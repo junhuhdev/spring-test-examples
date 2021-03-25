@@ -16,6 +16,8 @@ import java.lang.annotation.Target;
 				"spring.flyway.enabled=false",
 				"spring.test.database.replace=NONE",
 				"spring.datasource.driver-class-name=com.p6spy.engine.spy.P6SpyDriver",
+				"spring.jpa.hibernate.show-sql=false",
+				"spring.jpa.generate-ddl=false",
 				"spring.jpa.hibernate.ddl-auto=create-drop",
 		})
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
