@@ -3,6 +3,7 @@ package huh.enterprises.springtestexamples.annotation;
 import org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.testcontainers.junit.jupiter.Testcontainers;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -21,5 +22,6 @@ import java.lang.annotation.Target;
 				"spring.jpa.hibernate.ddl-auto=create-drop",
 		})
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+@Testcontainers
 public @interface DataTest {
 }
