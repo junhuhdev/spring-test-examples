@@ -18,19 +18,16 @@ import javax.persistence.Table;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "users")
+@Table
 @Entity
-public class User {
-
+public class Payment {
 	// @formatter:off
+
 	@Id
 	@Column
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	private String name;
-
-	private String email;
 
 	// @formatter:on
 }
