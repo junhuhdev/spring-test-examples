@@ -1,8 +1,6 @@
-# spring-test-examples
-
 ![image](https://user-images.githubusercontent.com/45692017/112557995-0a44ea00-8dce-11eb-93df-ac5016da6859.png)
 
-
+# spring-test-examples
 
 ### Different kind of tests
 
