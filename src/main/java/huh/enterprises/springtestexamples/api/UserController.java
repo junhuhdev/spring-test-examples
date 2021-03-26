@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import javax.validation.Valid;
+
 @RequiredArgsConstructor
 @ApiController(path = "/api/users")
 public class UserController {
@@ -23,7 +25,7 @@ public class UserController {
 	}
 
 	@PostMapping
-	public ResponseEntity<User> create(@RequestBody UserWriteQuery request) {
+	public ResponseEntity<User> create(@RequestBody @Valid UserWriteQuery request) {
 		var user = userService.createUser(request);
 		return ResponseEntity.ok(user);
 	}

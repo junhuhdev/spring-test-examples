@@ -23,7 +23,7 @@ class UserControllerTest {
 	@Autowired
 	private MockMvc mockMvc;
 
-	@DisplayName("Verify -> GET /api/users")
+	@DisplayName("Verify Contract -> GET /api/users")
 	@Test
 	public void verify_get_users() throws Exception {
 		mockMvc.perform(MockMvcRequestBuilders.get("/api/users")
