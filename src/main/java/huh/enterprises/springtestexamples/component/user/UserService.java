@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface UserService {
 
-	User createUser(UserRequest request);
+	User createUser(UserWriteQuery request);
 
 	List<User> findAll();
 

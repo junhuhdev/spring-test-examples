@@ -16,7 +16,7 @@ public class UserServiceImpl implements UserService {
 	private final UserRepository userRepository;
 
 	@Override
-	public User createUser(UserRequest request) {
+	public User createUser(UserWriteQuery request) {
 		User user = new User();
 		user.setEmail(request.getEmail());
 		user.setName(request.getName());

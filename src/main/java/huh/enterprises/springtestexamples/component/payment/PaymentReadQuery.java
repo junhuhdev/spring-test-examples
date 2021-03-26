@@ -1,4 +1,4 @@
-package huh.enterprises.springtestexamples.component.user;
+package huh.enterprises.springtestexamples.component.payment;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,9 +9,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Builder
-public class UserRequest {
-
-	private String email;
-	private String name;
-
+public class PaymentReadQuery {
 }
