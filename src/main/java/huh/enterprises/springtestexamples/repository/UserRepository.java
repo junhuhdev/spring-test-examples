@@ -35,4 +35,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
 			""", nativeQuery = true)
 	Optional<User> textBlock();
 
+	Optional<User> findByEmail(String email);
+
 }
