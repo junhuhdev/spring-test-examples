@@ -20,7 +20,8 @@ public class UserController {
 
 	@GetMapping
 	public ResponseEntity<?> selectAll() {
-		return ResponseEntity.ok().build();
+		var users = userService.findAll();
+		return ResponseEntity.ok(users);
 	}
 
 	@PostMapping
