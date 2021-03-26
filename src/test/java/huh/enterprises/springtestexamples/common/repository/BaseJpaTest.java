@@ -1,9 +1,8 @@
-package huh.enterprises.springtestexamples.annotation;
+package huh.enterprises.springtestexamples.common.repository;
 
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.testcontainers.containers.PostgreSQLContainer;
-import org.testcontainers.junit.jupiter.Container;
 
 @DataTest
 public abstract class BaseJpaTest {

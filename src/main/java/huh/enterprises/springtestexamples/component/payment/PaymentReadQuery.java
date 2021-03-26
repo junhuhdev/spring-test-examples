@@ -10,4 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 public class PaymentReadQuery {
+
+	private Long id;
+
 }

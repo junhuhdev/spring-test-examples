@@ -1,13 +1,10 @@
 package huh.enterprises.springtestexamples.repository;
 
-import huh.enterprises.springtestexamples.annotation.BaseJpaTest;
-import huh.enterprises.springtestexamples.annotation.DataTest;
+import huh.enterprises.springtestexamples.common.repository.BaseJpaTest;
 import huh.enterprises.springtestexamples.domain.RewardGroup;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.testcontainers.containers.PostgreSQLContainer;
-import org.testcontainers.junit.jupiter.Container;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

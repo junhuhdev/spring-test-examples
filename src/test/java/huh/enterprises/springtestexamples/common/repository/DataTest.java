@@ -1,9 +1,7 @@
-package huh.enterprises.springtestexamples.annotation;
+package huh.enterprises.springtestexamples.common.repository;
 
-import org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.testcontainers.junit.jupiter.Testcontainers;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
